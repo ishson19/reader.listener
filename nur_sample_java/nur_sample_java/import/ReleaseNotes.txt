@@ -1,0 +1,86 @@
+v1.8.1.46
+- Minor improvements
+
+v1.8.1.45
+- javadoc update (TxLevel)
+- Making sure disconnect event not fire if no success connection attempt
+
+v1.8.1.44
+- queryEthDevices use mDNS only with non Android devices.
+
+v1.8.1.41
+- Fixed queryEthDevices() to use only Java 7 functions
+- Added setConstantChannelIndex()
+- Improved documentation.
+- Fixed missing disconnect event if listener created after connection.
+
+v1.8.1.38
+- Added mDNS device search functionality in to queryEthDevices()
+
+v1.8.1.37
+- Fixed rssi filter data type
+
+v1.8.1.36
+- Fixed setSetupRfProfile
+- Javadoc fixes
+
+v1.8.1.35
+- Fixed possible write failure after reconnection
+
+v1.8.1.34
+- Fixed inventory select command response parsing
+- Added diagnostics functions. getDiagReport, setDiagConfig, getDiagConfig
+- Added NUR2 RfProfile setup support
+- Added NUR2 dev caps entries
+- Removed ini4j dependency
+
+v1.8.1.33
+- Fixed possible thread leak
+
+v1.8.1.32
+- writeEpcByEpc epc len fix
+
+v1.8.1.28
+- In case of multiple inventory stream notifications in buffer, preserve inventory notification "tagsAdded" field over notification replace
+
+v1.8.1.27 
+- Fixed read thread start sync on connect. Sometimes went for timeout because read thread was started already.
+
+v1.8.1.26
+- Fixed AutoTune notification
+
+v1.8.1.25 
+- NUR needs some time after boot, before it can receive commands reliably
+- Broadcast discovery set correct eth transport
+
+v1.8.1.24 
+- Add disableAck() method to NurApiTransport, allows transport to decide whether ACK is rally needed by transport or not.
+
+v1.8.1.23
+- NUR2 firmware update changes
+- Fix module setup rxsensitivity field serialization
+- NurTag gets also NurApi instance from FetchTags, InventoryNotification etc.
+- Fixed buffer size from NurCmdInventoryEx
+- Write thread fix for android 7
+- Fixed setPerAntennaPowerEx issue
+- Added Morocco. Peru, Israel and Hong Kong regions
+
+v1.8.1.19 
+- Remove unnecessary parameter check from NurCmdInvReadConfig
+
+v1.8.1.18
+- More reliability in low end devices (e.g. raspi) under heavy load
+
+v1.8.1.17
+- Implement NUR ACK handling
+- By default disabled logging to stdout, can be turned on with setLogToStdout(true)
+- Added getFwInfo() function
+
+v1.8.1.16
+- Fix possible multicore cpu race conditions
+- Added missing getVersions -command that provides the primary and
+secondary versions.
+
+v1.8.1.13
+- Fix packet data loss in some (rare) cases w/ huawei phones
+- Added NUR FW binary checking
